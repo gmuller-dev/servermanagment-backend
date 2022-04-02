@@ -1,5 +1,6 @@
 package fr.mullerguillaume.server.resource;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import fr.mullerguillaume.server.enumeration.Status;
 import fr.mullerguillaume.server.model.Response;
 import fr.mullerguillaume.server.model.Server;
@@ -99,6 +100,6 @@ public class ServerResource {
 
     @GetMapping(path = "/image/{fileName}", produces = IMAGE_PNG_VALUE)
     public byte[] deleteServer(@PathVariable("fileName") String fileName) throws IOException {
-        return Files.readAllBytes(Paths.get(System.getProperty("user.home")+"Downloads/images/"+fileName));
+        return Files.readAllBytes(Paths.get(System.getProperty("user.home")+"/Téléchargements/images/"+fileName));
     }
 }

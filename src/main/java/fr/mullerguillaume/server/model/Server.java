@@ -1,5 +1,6 @@
 package fr.mullerguillaume.server.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import fr.mullerguillaume.server.enumeration.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +14,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class Server {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
